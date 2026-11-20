@@ -4,6 +4,22 @@
   "description": "Human-in-the-loop SDD contract gate for DeepSeek Harness",
   "license": "MIT",
   "private": false,
+  "author": "Wei Chen",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williamchen520/dsh-coding-tool.git"
+  },
+  "homepage": "https://github.com/williamchen520/dsh-coding-tool",
+  "bugs": {
+    "url": "https://github.com/williamchen520/dsh-coding-tool/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "sdd",
+    "contract",
+    "human-in-the-loop",
+    "code-review"
+  ],
   "type": "module",
   "engines": {
     "node": ">=22.6"
