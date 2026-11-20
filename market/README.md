@@ -28,3 +28,16 @@ category: dev
 ```
 
 The version is pinned to a commit, not a moving branch.
+
+## dsh.so submission
+
+```text
+submitted: 2026-11-20
+submission id: 0f2cd7916e7ef411305dac2c100ea620
+issue: #771
+status: pending maintainer review
+```
+
+Submission is not the same as being listed. dsh.so merges schema-valid
+entries manually; no ETA is guaranteed.
+
