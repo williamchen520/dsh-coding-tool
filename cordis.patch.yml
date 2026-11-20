@@ -1,0 +1,4 @@
+- insert:
+    - id: sdd-gate
+      name: dsh-coding-tool
+      config: {}

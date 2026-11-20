@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "SDD 契约门禁",
+    "description": "规范、契约、检查和人工批准；不自动合并。"
+  },
+  "tools": {
+    "sdd_init": "生成 sdd/spec.json、approval.json、exceptions.json",
+    "sdd_hash": "返回规范 SHA-256，供人工审批",
+    "sdd_compile": "将已批准规范编译为 sdd/out",
+    "sdd_check": "检查审批、发现项和生成物是否过期",
+    "sdd_gate": "输出 PASS/FAIL；绝不自动批准或合并"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "SDD Contract Gate",
+    "description": "Spec, contract, check, and human approval — without auto-merge."
+  },
+  "tools": {
+    "sdd_init": "Create sdd/spec.json, approval.json, exceptions.json",
+    "sdd_hash": "Return the spec SHA-256 for human approval",
+    "sdd_compile": "Compile an approved spec into sdd/out",
+    "sdd_check": "Check approval, findings, and artifact freshness",
+    "sdd_gate": "Return PASS/FAIL; never approves or merges"
+  }
+}
