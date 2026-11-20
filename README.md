@@ -117,6 +117,21 @@ sdd/out/report.md
 
 `manifest.json` is deterministic: same spec + same repository -> same bytes.
 
+## Battle-tested in a real system
+
+This plugin was extracted from **SciPal**, an auditable biomedical RAG
+platform, then generalized so it no longer contains SciPal paths, specs, or
+data.
+
+Reference implementation:
+
+- https://github.com/williamchen520/scipal-public
+- 13,276 papers in the private evaluation corpus; 316 routes; 1,496 tests
+- 50-question internal study + 300-claim SciFact sanity check
+
+The plugin is independent and MIT-licensed; SciPal's public code snapshot is
+AGPL.
+
 ## Safety boundary
 
 ```text
@@ -138,6 +153,10 @@ node --test test/*.test.js
 For a local DSH bundle, install the directory through the DSH Plugin Manager
 (`install_bundle` with this absolute package directory). Then call
 `sdd_init` from the workspace.
+
+## Marketplace
+
+See `MARKETPLACE.md` for the listing copy, short description, and launch notes.
 
 ## License
 
