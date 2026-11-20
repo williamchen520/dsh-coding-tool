@@ -1,0 +1,61 @@
+{
+  "format": 1,
+  "title": {
+    "en": "SDD Contract Gate",
+    "zh": "SDD 契约门禁"
+  },
+  "description": {
+    "en": "A human-in-the-loop spec drift firewall for AI coding. Turns duplicate routes, stale generated artifacts, and unapproved contracts into a deterministic PASS/FAIL before review or merge. No LLM in the gate. No auto-merge. Extracted from SciPal (https://github.com/williamchen520/scipal-public).",
+    "zh": "面向 AI 编码的人工审批契约门禁：把重复路由、过期生成物和未批准契约变成确定性的 PASS/FAIL。门禁内不调用 LLM，不自动合并。抽取自 SciPal（https://github.com/williamchen520/scipal-public）。"
+  },
+  "metadata": {
+    "categories": {
+      "dev": {
+        "title": {
+          "en": "Developer Tools",
+          "zh": "开发工具"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-coding-tool",
+      "title": {
+        "en": "SDD Contract Gate",
+        "zh": "SDD 契约门禁"
+      },
+      "description": {
+        "en": "Stop shipping code that passes tests but silently drifts from the spec a human approved. Deterministic spec gate: no LLM, no auto-merge, explicit expiring exceptions. Built from SciPal, an auditable biomedical RAG platform.",
+        "zh": "阻止“测试通过但已偏离人工批准规范”的代码进入合并。确定性规范门禁：门禁内无 LLM、不自动合并、例外必须精确且过期失效。抽取自可审计生物医学 RAG 平台 SciPal。"
+      },
+      "author": "Wei Chen",
+      "homepage": "https://github.com/williamchen520/dsh-coding-tool",
+      "repository": {
+        "url": "https://github.com/williamchen520/dsh-coding-tool"
+      },
+      "metadata": {
+        "category": "dev",
+        "keywords": [
+          "sdd",
+          "contract",
+          "human-in-the-loop",
+          "code-review",
+          "ai-coding"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1795174797,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/williamchen520/dsh-coding-tool",
+            "commit": "e1629243ac7c25ccbdda7db1eb483a370323588c"
+          },
+          "engines": {}
+        }
+      ]
+    }
+  ]
+}

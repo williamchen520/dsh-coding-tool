@@ -158,6 +158,12 @@ For a local DSH bundle, install the directory through the DSH Plugin Manager
 
 See `MARKETPLACE.md` for the listing copy, short description, and launch notes.
 
+Add the index source in DSH:
+
+```text
+https://raw.githubusercontent.com/williamchen520/dsh-coding-tool/main/market/index.json
+```
+
 ## License
 
 MIT. The public SciPal snapshot is AGPL; this plugin is independent and
