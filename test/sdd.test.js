@@ -3,7 +3,7 @@ import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
 import test from 'node:test';
-import { check, compile, hashSpec, init, sha256Text } from '../lib/sdd.js';
+import { check, compile, gate, hashSpec, init, sha256Text } from '../lib/sdd.js';
 
 async function workspace() {
   const root = await fs.mkdtemp(path.join(os.tmpdir(), 'sdd-gate-'));
@@ -81,4 +81,25 @@ test('init creates templates and blank approval is rejected', async () => {
   const hashed = await hashSpec(root);
   assert.match(hashed.spec_sha256, /^[a-f0-9]{64}$/);
   await assert.rejects(() => compile(root), /not human-approved/);
+});
+
+test('approval JSON with UTF-8 BOM is accepted', async () => {
+  const root = await workspace();
+  const file = path.join(root, 'sdd', 'approval.json');
+  const approval = JSON.parse(await fs.readFile(file, 'utf8'));
+  await fs.writeFile(file, '\uFEFF' + JSON.stringify(approval, null, 2) + '\n');
+  const result = await compile(root);
+  assert.equal(result.status, 'pass');
+});
+
+test('gate returns FAIL when a blocking rule fails', async () => {
+  const root = await workspace();
+  await fs.writeFile(path.join(root, 'architecture.json'), JSON.stringify({
+    api: { endpoints: [{ route: '/health' }, { route: '/health' }] }
+  }));
+  await compile(root);
+  const result = await gate(root);
+  assert.equal(result.ok, false);
+  assert.equal(result.verdict, 'FAIL');
+  assert.ok(result.errors.some((error) => error.includes('duplicate')));
 });
