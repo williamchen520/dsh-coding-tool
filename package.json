@@ -43,6 +43,9 @@
       "patch": "./cordis.patch.yml"
     }
   },
+  "dependencies": {
+    "@deepseek-ai/dsh-tools": "0.2.1-rc.3"
+  },
   "scripts": {
     "test": "node --test test/*.test.js"
   }

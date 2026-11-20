@@ -13,7 +13,7 @@ function tool(name, description, handler, parameters = {}) {
     name,
     description,
     parameters: {
-      root: { type: 'string', required: false, description: 'Workspace root; defaults to cwd' },
+      root: { type: 'string', description: 'Workspace root; defaults to cwd' },
       ...parameters
     },
     output: {
@@ -35,7 +35,7 @@ export function apply(ctx) {
     'sdd_init',
     'Create sdd/spec.json, approval.json and exceptions.json in a workspace.',
     (root, args) => init(root, { force: Boolean(args.force) }),
-    { force: { type: 'boolean', required: false, description: 'Overwrite existing sdd files' } }
+    { force: { type: 'boolean', description: 'Overwrite existing sdd files' } }
   ));
 
   ctx.tools.register(tool(
